@@ -1,3 +1,5 @@
+-- test
+
 -- This script has been converted to FE by iPxter
 
 if game:GetService("RunService"):IsClient() then error("Script must be server-side in order to work; use h/ and not hl/") end local Player,Mouse,mouse,UserInputService,ContextActionService = owner do print("FE Compatibility code by Mokiros | Translated to FE by iPxter") script.Parent = Player.Character
@@ -54,7 +56,7 @@ Event.OnServerEvent:Connect(function(plr,io)
     end
 end)
 Event.Parent = NLS([==[
-local Player = game:GetService("Players").LocalPlayer
+local Player = owner
 local Event = script:WaitForChild("UserInput_Event")
 
 local UIS = game:GetService("UserInputService")
@@ -65,8 +67,6 @@ local input = function(io,a)
 end
 UIS.InputBegan:Connect(input)
 UIS.InputEnded:Connect(input)
-
-local Mouse = Player:GetMouse()
 local h,t
 --Give the server mouse data 30 times every second, but only if the values changed
 --If player is not moving their mouse, client won't fire events
